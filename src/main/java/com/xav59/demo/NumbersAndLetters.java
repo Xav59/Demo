@@ -17,12 +17,7 @@ public class NumbersAndLetters {
             .compile(digitsSearchPattern + "|" + spelledDigitsPattern);
 
     public static Stream<String> readFile(String fileName) throws IOException {
-        try {
             return Files.lines(Paths.get(fileName));
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw e;
-        }
     }
 
     public static String[] readFileLines(String fileName) throws IOException {
@@ -55,7 +50,7 @@ public class NumbersAndLetters {
         String firstDigit = new String();
         String lastDigit = new String();
 
-        // TODO: if s is empty or null, return Optional.empty()
+        // TODO: if s is empty or null, return empty
 
         for (int i = 0; i <= s.length(); i++) {
             Optional<String> digit = includeSpelledOnes ? getDigitIncludingSpelledOnes(s.substring(i))
@@ -66,7 +61,7 @@ public class NumbersAndLetters {
             }
 
         }
-        // if no digit found then return Optional.empty()
+        // if no digit found then return empty
 
         for (int i = s.length(); i >= 0; i--) {
             Optional<String> digit = includeSpelledOnes ? getDigitIncludingSpelledOnes(s.substring(i))
@@ -84,10 +79,12 @@ public class NumbersAndLetters {
 
     public static void main(String[] args) throws IOException {
 
-        // String fileName = "src/main/resources/input/numbersAndLetters/sampleWithNoSpelledDigits.txt";
+        // String fileName =
+        // "src/main/resources/input/numbersAndLetters/sampleWithNoSpelledDigits.txt";
         String fileName = "src/main/resources/input/numbersAndLetters/sampleWithMix.txt";
         // Generate an error marked to fix
-        // String fileName = "src/main/resources/input/numbersAndLetters/sampleWithMixAndOneLineWithoutAnyPureDigit.txt";
+        // String fileName =
+        // "src/main/resources/input/numbersAndLetters/sampleWithMixAndOneLineWithoutAnyPureDigit.txt";
         // Large dataset
         // String fileName = "src/main/resources/input/numbersAndLetters/data.txt";
 
