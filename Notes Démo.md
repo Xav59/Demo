@@ -1,5 +1,16 @@
 # Déroulement de la démo
 
+## Explication de code
+- 1er use case: ne rien sélectionner et demander un `Explain`
+  - > montrer le résultat dans le chat
+- 2e use case: sélectionner la méthode ligne 49 `getConcatOfFirstAndLastDigits` et demander `Explain`
+  - > montrer dans le chat l'explication assez détaillée
+
+
+## Génération de javadoc
+- Sélectionner la méthode ligne 49 `getConcatOfFirstAndLastDigits` et demander `Generate Docs`
+
+
 ## Complétion de code
 
 - Dans le `main`, faire une refacto pour ajouter un `try/catch`
@@ -35,17 +46,6 @@ In the method readFile, surround the existing code with a try/catch to log excep
   - > montrer la logique rapidement d'aller chercher le 1er digit puis le dernier
   - Ligne 76, demander de traiter le `FIXME` pour éviter les `NumberFormatException`
     - > montrer qu'il veut supprimer un bloc de code :/
-
-
-## Explication de code
-- 1er use case: sélectionner la méthode ligne 49 `getConcatOfFirstAndLastDigits` et demander `Explain`
-  - > montrer dans le chat l'explication assez détaillée
-- 2e use case: ne rien sélectionner et demander un `Explain`
-  - > montrer le résultat dans le chat
-
-
-## Génération de javadoc
-- Sélectionner la méthode ligne 49 `getConcatOfFirstAndLastDigits` et demander `Generate Docs`
 
 
 ## Génération de tests unistaires
